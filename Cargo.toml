@@ -1,5 +1,5 @@
 [package]
-name = "rs-grep"
+name = "rs_grep"
 version = "0.1.0"
 edition = "2021"
 
