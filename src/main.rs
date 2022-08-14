@@ -17,9 +17,7 @@ fn main() {
     println!("Searching for '{}'", config.query);
     println!("In file '{}'", config.file_path);
 
-    let contents = fs::read_to_string(config.file_path).expect("Should be able to read a file");
-
-    println!("With text:\n {contents}");
+    run(config);
 }
 
 impl Config {
@@ -33,4 +31,10 @@ impl Config {
 
         Ok(Config { query, file_path })
     }
+}
+
+fn run(config: Config) {
+    let contents = fs::read_to_string(config.file_path).expect("Should be able to read a file");
+
+    println!("With text:\n {contents}");
 }
