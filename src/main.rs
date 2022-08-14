@@ -21,6 +21,9 @@ fn main() {
 impl Config {
     // implement a new function for the config
     fn new(args: &[String]) -> Config {
+        if args.len() < 3 {
+            panic!("Not enough arguments");
+        }
         let query = args[1].clone();
         let file_path = args[2].clone();
 
